@@ -4,7 +4,7 @@
 
 double consumeCpu1() {
     double x = 1;
-    for(double i=1;i<1000000000;i++) {
+    for(double i=1;i<500000000;i++) {
         x += sqrt(i);
     }
 
@@ -14,7 +14,7 @@ double consumeCpu1() {
 
 struct timeval consumeCpu2() {
     struct timeval date;
-    for(int i=1;i<200000000;i++) {
+    for(int i=1;i<100000000;i++) {
         gettimeofday(&date, NULL);
     }
 
@@ -22,15 +22,8 @@ struct timeval consumeCpu2() {
 }
 
 void consumeCpu3() {
-    int total = 4000000;
-
-    for(int i=1;i<total;i++) {
-        printf("%d ", i);
-        fflush(stdout);
-    }
-
-    // for(int i=1;i<total;i++) printf("%d ", i);
-    // for(int i=1;i<total;i++) printf("%d\n", i);
+    int total = 2000000;
+    for(int i=1;i<total;i++) printf("%d\n", i);
 }
 
 int main() {
@@ -38,3 +31,69 @@ int main() {
     consumeCpu1();
     consumeCpu3();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // char buffer[65536];
+    // setvbuf(stdout, buffer, _IOFBF, 65536);
+    // for(int i=1;i<total;i++) printf("%d\n", i);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // char buffer[8192];
+    // setvbuf(stdout, buffer, _IOFBF, 8192);
+    // for(int i=1;i<total;i++) {
+    //     printf("%d ", i);
+    //     if(i % 5 == 0) printf("\n");
+    // }
