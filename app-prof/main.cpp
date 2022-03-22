@@ -2,6 +2,8 @@
 #include <sys/time.h>
 #include <math.h>
 
+char buffer[65536];
+
 double consumeCpu1() {
     double x = 1;
     for(double i=1;i<500000000;i++) {
@@ -65,9 +67,7 @@ int main() {
 
 
 
-    // char buffer[65536];
     // setvbuf(stdout, buffer, _IOFBF, 65536);
-    // for(int i=1;i<total;i++) printf("%d\n", i);
 
 
 
