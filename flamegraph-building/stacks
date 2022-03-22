@@ -1,0 +1,6 @@
+main;init;init_processor;malloc 2
+main;init;init_logging;malloc 4
+main;processing;compute_value 8
+main;processing;serialize_value 4
+main;processing; 3
+main;cleanup;free 3

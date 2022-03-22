@@ -1,0 +1,5 @@
+a.out
+perf.data.old
+perf.data
+*.tmp
+flamegraph.svg
